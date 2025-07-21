@@ -31,6 +31,8 @@ static void __attribute__((constructor)) fill_lut(void)
 #define filter(x) (filterlut[(x) & 0xfffff])
 #endif
 
+bool weak_mifare_mode = false;
+
 static void quicksort(uint32_t *const start, uint32_t *const stop)
 {
   uint32_t *it = start + 1, *rit = stop;
